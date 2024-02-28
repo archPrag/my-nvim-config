@@ -11,7 +11,8 @@ return {
 						"$dir/$fileNameWithoutExt",
 					},
 				},
-			})
+	 		})
+      vim.keymap.set('n', '<leader>x', ':RunCode<CR>', { noremap = true, silent = false })
 		end,
 	},
 }

@@ -17,13 +17,16 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-
+      local capabilities = require('cmp_nvim_lsp').default_capabilities()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
-        capabilities = capabilities
+        capabilities=capabilities
       })
       lspconfig.rust_analyzer.setup({
-        capabilities = capabilities
+        capabilities=capabilities
+      })
+      lspconfig.pyright.setup({
+        capabilities=capabilities
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
