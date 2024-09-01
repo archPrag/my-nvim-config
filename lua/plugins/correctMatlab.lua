@@ -1,5 +1,0 @@
-return {
-	{
-    'BalderHolst/matlab.nvim'
-	},
-}
